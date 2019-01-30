@@ -26,3 +26,23 @@ const check-util = require("checks-utils")
 ```js
 const newCheck = new check-util.check(1000, 0.05, 90, 0.3)
 ```
+
+## Calculate net value
+Calculate net value after discount commision.
+
+#### example:
+```js
+const newCheck = new check-util.check(100000, 0.05, 90, 0.3)
+
+const netValue = newCheck.netValue() // => 97000
+```
+
+## Calculate minimal value
+Calculate the minimal value accepted after aply commission and discount tax.
+
+#### example:
+```js
+const newCheck = new check-util.check(100000, 0.05, 90, 0.3)
+
+const netValue = newCheck.minValue() // => 89725
+```
